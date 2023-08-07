@@ -2,6 +2,9 @@
 
 // code your solution here
 function superbowlWin(record) {
-  const winRecord = records.find((record) => record.result === "W");
-  return winRecord ? winRecord.year : undefined;
+  for (let item of record) {
+    if (item.result === "W") {
+      return item.year;
+    }
+  }
 }
